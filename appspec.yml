@@ -4,23 +4,8 @@ files:
   - source: /index.html
     destination: /var/www/html/
 hooks:
-  ApplicationStop:
-    - location: stop-server.sh
-      timeout: 300
-      runas: root
-      
-  BeforeInstall:
-    - location: install-dependencies.sh
-      timeout: 300
-      runas: root      
-
-  AfterInstall:
-    - location: after-install.sh
-      timeout: 300
-      runas: root
-
   ApplicationStart:
-    - location: start-server.sh
+    - location: install.sh
       timeout: 300
       runas: root
   
