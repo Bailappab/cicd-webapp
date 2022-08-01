@@ -13,7 +13,6 @@ phases:
         commands:
             - echo "This is the build phase"
             - echo "Here we can run some tests"
-            - grep -Fq "Welcome" index.html
     post_build:
         commands:
             - echo "This is the post build phase"
@@ -21,5 +20,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: DevOpsAppArtifacts             
+  name: cicd-webapp             
             
